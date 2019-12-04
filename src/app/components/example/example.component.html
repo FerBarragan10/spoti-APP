@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let pais of paises;let ind=index">
+        {{ind}}-{{pais.name}}--{{pais.capital}}
+        <button (click)="abrirPopUp(ind)">abrir</button>
+    </li>
+</ul>

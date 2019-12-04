@@ -1,0 +1,12 @@
+.popUp{
+ width:69vh;
+ height:50vh;
+ background-color: blue;
+ color: white;
+}
+.button{
+float:right;
+}
+.datos{
+ text-align: center;
+}
