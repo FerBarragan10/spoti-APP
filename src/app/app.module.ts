@@ -10,6 +10,9 @@ import { HomeSpoComponent } from './components/home-spo/home-spo.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeSpoComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe,
+    LoadingComponent,
+    DomseguroPipe,
   ],
   imports: [
     BrowserModule,

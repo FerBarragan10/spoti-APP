@@ -8,9 +8,11 @@ import{Router} from '@angular/router';
 })
 export class HomeSpoComponent implements OnInit {
  nuevasCanciones:any[]=[];
+ loading:boolean;
   constructor(private spotify:SpotifyService,
               private router:Router) 
-  { }
+  { this.loading=true;
+  }
 
   ngOnInit() {
     this.getReleases();
@@ -18,11 +20,12 @@ export class HomeSpoComponent implements OnInit {
 
   getReleases(){
     this.spotify.getReleases().subscribe((data:any)=>{
-        console.log(data.albums.items);
-        this.nuevasCanciones=data.albums.items;
+        console.log(data);
+        this.nuevasCanciones=data;
+        this.loading=false;
       })
   }
-  getArtista(cancion:any){
+  getSinger(cancion:any){
     let artistaId;
     if(cancion.type === 'artists'){
       artistaId=cancion.id;
